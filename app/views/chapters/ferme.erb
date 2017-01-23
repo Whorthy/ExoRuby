@@ -1,0 +1,22 @@
+<section class="chapters">
+
+	<% @chapters.each do |chapter| %>
+	<div class="chapter-<% chapter.id %>">
+		<% if !chapter.parent_id %>
+			<h2> <%= chapter.name %>, ID: <%= chapter.id %></h2>
+
+
+			<% chapter.children.each do |sub_chapter| %>
+			<h3> <%= sub_chapter.name %>, ID: <%= sub_chapter.id %></h3>
+
+				<% @articles.where(:chapter_id => sub_chapter.id).each do |article| %>
+					<article>
+						<p><%= article.content[0..255] %></p>
+					</article>
+				<% end %>
+			<% end %>
+	</div>
+		<% end %>
+	<% end %>
+
+</section>

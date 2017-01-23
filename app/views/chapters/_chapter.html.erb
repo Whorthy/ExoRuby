@@ -1,0 +1,9 @@
+<h1><%= chapter.name %></h1>
+<%= render partial: "sub_chapter", collection: chapter.children, as: :chapter %>
+
+
+<!--
+<tr>
+	<td><%= chapter.id %></td>
+	<td><%= chapter.name %></br><td>
+</td>
