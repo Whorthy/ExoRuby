@@ -36,7 +36,7 @@
 
 presentation = Chapter.create({name: "Presentation", published_at: Time.zone.now})
 
-introduction = Chapter.create({name: "Introduction", published_at: Time.zone.now})
+introduction = Chapter.create({name: "Introduction"})
 rvm = introduction.children.create({name: "RVM", published_at: Time.zone.now})
 
 rvm.articles.create({content: "Creer le fichier .ruby-version avec le contenu suivant: `ruby-2.3.1`. Ce fichier permet de décrire "})
