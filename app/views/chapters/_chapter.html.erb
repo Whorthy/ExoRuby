@@ -1,10 +1,7 @@
-<h1><%= chapter.name %> - <%= sexy_date(chapter.published_at) %> - <%= time_ago_in_words(chapter.published_at) %></h1>
+<h1>
+	<%= chapter.name %> - 
+	<%= sexy_date(chapter.created_at) %> - 
+
+</h1>
 
 <%= render partial: "sub_chapter", collection: chapter.children, as: :chapter %>
-
-
-<!--
-<tr>
-	<td><%= chapter.id %></td>
-	<td><%= chapter.name %></br><td>
-</td>
