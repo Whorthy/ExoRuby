@@ -39,9 +39,9 @@ presentation = Chapter.create({name: "Presentation", published_at: Time.zone.now
 introduction = Chapter.create({name: "Introduction"})
 rvm = introduction.children.create({name: "RVM", published_at: Time.zone.now})
 
-rvm.articles.create({content: "Creer le fichier .ruby-version avec le contenu suivant: `ruby-2.3.1`. Ce fichier permet de décrire "})
-rvm.articles.create({content: "Creer le fichier .ruby-gemset avec le contenu suivant: `mydoc`. Ce fichier permet de définir une "})
-rvm.articles.create({content: "Pour recharger l'environement il faut faire un `cd .` ou relancer la console"})
+rvm.articles.create({name: "Etape_1", content: "Creer le fichier .ruby-version avec le contenu suivant: `ruby-2.3.1`. Ce fichier permet de décrire ", published_at: Time.zone.now})
+rvm.articles.create({name: "Etape_2", content: "Creer le fichier .ruby-gemset avec le contenu suivant: `mydoc`. Ce fichier permet de définir une "})
+rvm.articles.create({name: "Etape_3", content: "Pour recharger l'environement il faut faire un `cd .` ou relancer la console", published_at: Time.zone.now})
 
 
 introduction.children.create({name: "Initialisation des dépendances", published_at: Time.zone.now})
@@ -49,6 +49,8 @@ introduction.children.create({name: "Initialisation des dépendances", published
 
 
 #github.com:rapidos/mydoc.git
+
+#Article.updateAll()
 
 
 

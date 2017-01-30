@@ -1,4 +1,6 @@
 <tr>
-	<td><%= article.id %></td>
-	<td><%= article.content[0..255] %></td>
+	<td><%= article.name %></td>
+	<!--<td><%= article.content[0..255] %></td> -->
+	<td><%= link_to "Lire l'article" , article_path(article) %></td>
+	<td>Nombre de vues :<%= article.ViewCount%></td>
 </tr>
