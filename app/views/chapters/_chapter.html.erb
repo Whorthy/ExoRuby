@@ -1,6 +1,7 @@
 <h1>
 	<%= chapter.name %> - 
-	<%= sexy_date(chapter.created_at) %> - 
+	<%= sexy_date chapter.published_at %> - 
+	<%= is_published chapter.published_at %>
 
 </h1>
 
